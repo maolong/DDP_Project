@@ -1,0 +1,50 @@
+Developing Data Products - Course Project
+========================================================
+author: Mauro
+date: 2016-02-27
+transition: rotate
+autosize: true
+
+Analysis of car fuel consumptions and emissions 
+========================================================
+type: sub-section
+
+This presentation is being created as assignment for the coursera developing data products course. 
+The assignment is designed to show ability of use of the following concepts:
+
+- **shiny** to build data product application
+- **R-Presentation or slidify** to create data product related presentations
+
+The Application
+========================================================
+type: sub-section
+For the assignment, a simple application called **Car fuel consumptions and emissions 2000-2013** has been developed and deployed at: 
+https://maolong.shinyapps.io/DDP_Project/
+
+The application allows the user to:
+- Select some inputs: the range of engine capacity, type of transmission, euro standard filled. 
+- View the outputs (as a graph) in scatter plot mode or density mode 
+
+The Data
+========================================================
+type: sub-section
+This application is based on the UK Vehicle Certification Agency Database (simplified for the scope of this application).
+
+Dataset is a consolidated car fuel consumptions and emissions data published by the Vehicle Certification Agency (VCA) for years 2000 to 2013.
+Dataset has been obtained from [here](http://data.okfn.org/data/amercader/car-fuel-and-emissions) and processed for the course project.
+
+Source code for the project is available on [GitHub](https://github.com/maolong/DDP_Project).
+
+Data Samples
+=====================
+type: sub-section
+<font size="4">
+First and Last rows of dataset
+```{r echo=FALSE}
+library(data.table)
+dt <- fread('data/VCA_data.csv')
+dt <- subset(dt, select=-c(model,manufacturer))
+knitr::kable(head(dt, n=4L))
+knitr::kable(tail(dt, n=4L))
+```
+</font>
