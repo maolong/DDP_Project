@@ -32,4 +32,7 @@ The user can select three different input:
 2. Transmission Type as checkbox
 3. Euro Standard as checkbox
 
-In output the application return 4 type of graphs
+In output the application returns 4 type of graphs to compare consumption and emission with other variables
+
+The application cna be accessed [here](https://maolong.shinyapps.io/DDP_Project/)
+
